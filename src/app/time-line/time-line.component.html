@@ -1,0 +1,14 @@
+<ul>
+  <li *ngFor="let hour of hours">
+    <div class="hour" [ngStyle]="{'width': hourWidthStr}">
+      <span>{{hour}}</span><div class="tick"></div>
+    </div>
+  </li>
+  <li>
+      <div class="tick"></div>
+  </li>
+</ul>
+
+<div class="horizontal-bar" [ngStyle]="{'width': barWidthStr}">
+  <app-period style="height:inherit" [startMinute]="60" [endMinute]="120"></app-period>
+</div>
